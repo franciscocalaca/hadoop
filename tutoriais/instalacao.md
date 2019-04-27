@@ -110,6 +110,30 @@ $HADOOP_HOME/sbin/start-dfs.sh
 $HADOOP_HOME/sbin/stop-dfs.sh
 ```
 
+## Verificação na web
+
+http://localhost:9870/
+
+## Comandos iniciais
+
+hdfs dfs  -ls /
+
+hdfs dfs  -mkdir /exemplo
+
+hdfs dfs -rm -r -f /exemplo
+
+
+
+## Mudança de portas da versão 2 para a versão 3
+
+
+Namenode ports: 50470 --> 9871, 50070 --> 9870, 8020 --> 9820
+
+Secondary NN ports: 50091 --> 9869, 50090 --> 9868
+
+Datanode ports: 50020 --> 9867, 50010 --> 9866, 50475 --> 9865, 50075 --> 9864
+
+
 
 
 
