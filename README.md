@@ -1,3 +1,3 @@
 # HADOOP
 
-[Instalação](tutoriais/instalacao)
+[Instalação](tutoriais/instalacao.md)
