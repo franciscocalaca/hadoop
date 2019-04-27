@@ -122,7 +122,36 @@ hdfs dfs  -mkdir /exemplo
 
 hdfs dfs -rm -r -f /exemplo
 
+## Preparação dos dados
 
+### Download de arquivos
+
+https://grouplens.org/datasets/movielens/
+
+http://files.grouplens.org/datasets/movielens/ml-10m.zip
+
+### Criação do diretório de dados
+
+hdfs dfs  -mkdir /dados
+
+### Envio de arquivos
+
+hdfs dfs -put ./ml-10m.zip /dados
+
+hdfs dfs -ls /dados
+
+
+Fator de tolerancia a falhas
+hadoop fs -stat %r /dados/ml-10m.zip
+ou
+hdfs dfs -ls /dados/ml-10m.zip 
+
+hadoop fs -setrep 3 /dados/ml-10m.zip
+
+
+
+
+##Comandos mais utilizados
 
 ## Mudança de portas da versão 2 para a versão 3
 
@@ -132,6 +161,8 @@ Namenode ports: 50470 --> 9871, 50070 --> 9870, 8020 --> 9820
 Secondary NN ports: 50091 --> 9869, 50090 --> 9868
 
 Datanode ports: 50020 --> 9867, 50010 --> 9866, 50475 --> 9865, 50075 --> 9864
+
+
 
 
 
